@@ -1,0 +1,21 @@
+{
+  "_comment": "KPI driver tree. Types: absolute (stock, value at month-end), accumulate (flow, month sum), rate_accumulate (ratio of two accumulated KPIs), rate (ratio of two stock KPIs).",
+  "kpis": {
+    "active_merchant":  {"label": "Active merchants",  "type": "absolute",        "unit": "merchants", "good_direction": "up"},
+    "paying_merchant":  {"label": "Paying merchants",  "type": "absolute",        "unit": "merchants", "good_direction": "up"},
+    "active_rate":      {"label": "Active rate",       "type": "rate",            "unit": "ratio",     "good_direction": "up",
+                         "numerator": "active_merchant", "denominator": "paying_merchant"},
+    "new_merchant":     {"label": "New merchants",     "type": "accumulate",      "unit": "merchants", "good_direction": "up"},
+    "expiry_merchant":  {"label": "Expired merchants", "type": "accumulate",      "unit": "merchants", "good_direction": "down"},
+    "renewed_merchant": {"label": "Renewed merchants", "type": "accumulate",      "unit": "merchants", "good_direction": "up"},
+    "renewal_ratio":    {"label": "Renewal ratio",     "type": "rate_accumulate", "unit": "ratio",     "good_direction": "up",
+                         "numerator": "renewed_merchant", "denominator": "expiry_merchant"}
+  },
+  "relations": [
+    {"target": "active_merchant", "kind": "product", "factors": ["paying_merchant", "active_rate"]},
+    {"target": "paying_merchant", "kind": "flow", "inflows": ["new_merchant", "renewed_merchant"], "outflows": ["expiry_merchant"]}
+  ],
+  "headline_kpi": "active_merchant",
+  "dimensions": ["province", "channel"],
+  "mover_min_scale_share": 0.02
+}

@@ -1,0 +1,559 @@
+{
+  "facts": {
+    "vertical": "fnb",
+    "date": "2026-10-28",
+    "compare_date": "2026-09-28",
+    "headline_kpi": "active_merchant",
+    "month_end": "2026-10-31",
+    "month_end_weekday": "Saturday",
+    "days_remaining_in_month": 3,
+    "kpis": {
+      "active_merchant": {
+        "label": "Active merchants",
+        "type": "absolute",
+        "unit": "merchants",
+        "basis": "level",
+        "current": 57009,
+        "previous_month_same_day": 58313,
+        "change": -1304,
+        "change_unit": "merchants",
+        "change_pct": -2.2,
+        "month_end_forecast": 59878,
+        "good_direction": "up",
+        "trend": {
+          "direction": "up",
+          "strength": "moderate",
+          "momentum": "decelerating",
+          "window_days": 180,
+          "growth_pct_per_day": 0.014,
+          "change_over_window_pct": 2.5
+        }
+      },
+      "paying_merchant": {
+        "label": "Paying merchants",
+        "type": "absolute",
+        "unit": "merchants",
+        "basis": "level",
+        "current": 77798,
+        "previous_month_same_day": 77826,
+        "change": -28,
+        "change_unit": "merchants",
+        "change_pct": -0.0,
+        "month_end_forecast": 77856,
+        "good_direction": "up",
+        "trend": {
+          "direction": "up",
+          "strength": "moderate",
+          "momentum": "decelerating",
+          "window_days": 180,
+          "growth_pct_per_day": 0.013,
+          "change_over_window_pct": 2.3
+        },
+        "month_end_forecast_formula": 77798
+      },
+      "active_rate": {
+        "label": "Active rate",
+        "type": "rate",
+        "unit": "percent",
+        "basis": "level",
+        "current": 73.3,
+        "previous_month_same_day": 74.9,
+        "change": -1.6,
+        "change_unit": "pp",
+        "change_pct": -2.2,
+        "month_end_forecast": 76.9,
+        "good_direction": "up",
+        "trend": {
+          "direction": "flat",
+          "strength": "weak",
+          "momentum": "accelerating",
+          "window_days": 180,
+          "growth_pct_per_day": -0.001,
+          "change_over_window_pct": -0.2
+        }
+      },
+      "new_merchant": {
+        "label": "New merchants",
+        "type": "accumulate",
+        "unit": "merchants",
+        "basis": "month-to-date",
+        "current": 3115,
+        "previous_month_same_day": 3325,
+        "change": -210,
+        "change_unit": "merchants",
+        "change_pct": -6.3,
+        "month_end_forecast": 3451,
+        "good_direction": "up"
+      },
+      "expiry_merchant": {
+        "label": "Expired merchants",
+        "type": "accumulate",
+        "unit": "merchants",
+        "basis": "month-to-date",
+        "current": 5313,
+        "previous_month_same_day": 5359,
+        "change": -46,
+        "change_unit": "merchants",
+        "change_pct": -0.9,
+        "month_end_forecast": 5879,
+        "good_direction": "down"
+      },
+      "renewed_merchant": {
+        "label": "Renewed merchants",
+        "type": "accumulate",
+        "unit": "merchants",
+        "basis": "month-to-date",
+        "current": 2126,
+        "previous_month_same_day": 2168,
+        "change": -42,
+        "change_unit": "merchants",
+        "change_pct": -1.9,
+        "month_end_forecast": 2356,
+        "good_direction": "up"
+      },
+      "renewal_ratio": {
+        "label": "Renewal ratio",
+        "type": "rate_accumulate",
+        "unit": "percent",
+        "basis": "month-to-date",
+        "current": 40.0,
+        "previous_month_same_day": 40.5,
+        "change": -0.4,
+        "change_unit": "pp",
+        "change_pct": -1.1,
+        "month_end_forecast": 40.1,
+        "good_direction": "up"
+      }
+    },
+    "headline_waterfall": [
+      {
+        "label": "Active merchants 2026-09-28",
+        "kind": "start",
+        "value": 58313
+      },
+      {
+        "label": "New merchants (via paying merchants)",
+        "kind": "step",
+        "value": 2505
+      },
+      {
+        "label": "Renewed merchants (via paying merchants)",
+        "kind": "step",
+        "value": 1677
+      },
+      {
+        "label": "Expired merchants (via paying merchants)",
+        "kind": "step",
+        "value": -4203
+      },
+      {
+        "label": "Active rate effect",
+        "kind": "step",
+        "value": -1283
+      },
+      {
+        "label": "Active merchants 2026-10-28",
+        "kind": "end",
+        "value": 57009
+      }
+    ],
+    "flow_decomposition": {
+      "target": "paying_merchant",
+      "start": 77826,
+      "end": 77798,
+      "change": -28,
+      "contributions": {
+        "new_merchant": 3381,
+        "renewed_merchant": 2263,
+        "expiry_merchant": -5672
+      }
+    },
+    "movers": {
+      "active_merchant|province": {
+        "kpi": "active_merchant",
+        "dimension": "province",
+        "unit": "merchants",
+        "total_change": -1304,
+        "filtered_members": 0,
+        "gross_movement": 1490,
+        "top": [
+          {
+            "member": "Harborview",
+            "contribution": -1106,
+            "share_of_change_pct": 84.8,
+            "share_of_gross_movement_pct": 74.2,
+            "value_prev": 7471,
+            "value_curr": 6365,
+            "size_share_pct": 12.8,
+            "paying_merchant_effect": 5,
+            "active_rate_effect": -1111,
+            "rate_prev_pct": 76.2,
+            "rate_curr_pct": 64.8
+          },
+          {
+            "member": "Eastvale",
+            "contribution": -92,
+            "share_of_change_pct": 7.1,
+            "share_of_gross_movement_pct": 6.2,
+            "value_prev": 7680,
+            "value_curr": 7588,
+            "size_share_pct": 13.2,
+            "paying_merchant_effect": 10,
+            "active_rate_effect": -102,
+            "rate_prev_pct": 72.9,
+            "rate_curr_pct": 71.9
+          },
+          {
+            "member": "Riverbend",
+            "contribution": 50,
+            "share_of_change_pct": -3.8,
+            "share_of_gross_movement_pct": 3.4,
+            "value_prev": 6071,
+            "value_curr": 6121,
+            "size_share_pct": 10.5,
+            "paying_merchant_effect": -18,
+            "active_rate_effect": 68,
+            "rate_prev_pct": 76.8,
+            "rate_curr_pct": 77.6
+          },
+          {
+            "member": "Highland",
+            "contribution": -49,
+            "share_of_change_pct": 3.8,
+            "share_of_gross_movement_pct": 3.3,
+            "value_prev": 5379,
+            "value_curr": 5330,
+            "size_share_pct": 9.2,
+            "paying_merchant_effect": -32,
+            "active_rate_effect": -17,
+            "rate_prev_pct": 73.8,
+            "rate_curr_pct": 73.6
+          },
+          {
+            "member": "Northbay",
+            "contribution": -49,
+            "share_of_change_pct": 3.8,
+            "share_of_gross_movement_pct": 3.3,
+            "value_prev": 8380,
+            "value_curr": 8331,
+            "size_share_pct": 14.4,
+            "paying_merchant_effect": 43,
+            "active_rate_effect": -92,
+            "rate_prev_pct": 74.9,
+            "rate_curr_pct": 74.0
+          }
+        ]
+      },
+      "active_rate|province": {
+        "kpi": "active_rate",
+        "dimension": "province",
+        "unit": "pp",
+        "total_change": -1.65,
+        "filtered_members": 0,
+        "gross_movement": 1.9,
+        "top": [
+          {
+            "member": "Harborview",
+            "contribution": -1.42,
+            "share_of_change_pct": 86.0,
+            "share_of_gross_movement_pct": 74.5,
+            "value_prev": 76.2,
+            "value_curr": 64.8,
+            "size_share_pct": 12.6,
+            "own_rate_effect": -1.43,
+            "mix_effect": 0.01
+          },
+          {
+            "member": "Eastvale",
+            "contribution": -0.11,
+            "share_of_change_pct": 7.0,
+            "share_of_gross_movement_pct": 6.0,
+            "value_prev": 72.9,
+            "value_curr": 71.9,
+            "size_share_pct": 13.6,
+            "own_rate_effect": -0.13,
+            "mix_effect": 0.02
+          },
+          {
+            "member": "Riverbend",
+            "contribution": 0.07,
+            "share_of_change_pct": -4.1,
+            "share_of_gross_movement_pct": 3.5,
+            "value_prev": 76.8,
+            "value_curr": 77.6,
+            "size_share_pct": 10.2,
+            "own_rate_effect": 0.09,
+            "mix_effect": -0.02
+          },
+          {
+            "member": "Highland",
+            "contribution": -0.06,
+            "share_of_change_pct": 3.7,
+            "share_of_gross_movement_pct": 3.2,
+            "value_prev": 73.8,
+            "value_curr": 73.6,
+            "size_share_pct": 9.4,
+            "own_rate_effect": -0.02,
+            "mix_effect": -0.04
+          },
+          {
+            "member": "Northbay",
+            "contribution": -0.06,
+            "share_of_change_pct": 3.6,
+            "share_of_gross_movement_pct": 3.1,
+            "value_prev": 74.9,
+            "value_curr": 74.0,
+            "size_share_pct": 14.5,
+            "own_rate_effect": -0.12,
+            "mix_effect": 0.06
+          }
+        ]
+      },
+      "new_merchant|province": {
+        "kpi": "new_merchant",
+        "dimension": "province",
+        "unit": "merchants",
+        "total_change": -210,
+        "filtered_members": 0,
+        "gross_movement": 232,
+        "top": [
+          {
+            "member": "Eastvale",
+            "contribution": -46,
+            "share_of_change_pct": 21.9,
+            "share_of_gross_movement_pct": 19.8,
+            "value_prev": 448,
+            "value_curr": 402,
+            "size_share_pct": 13.5
+          },
+          {
+            "member": "Harborview",
+            "contribution": -42,
+            "share_of_change_pct": 20.0,
+            "share_of_gross_movement_pct": 18.1,
+            "value_prev": 453,
+            "value_curr": 411,
+            "size_share_pct": 13.6
+          },
+          {
+            "member": "Pinecrest",
+            "contribution": -36,
+            "share_of_change_pct": 17.1,
+            "share_of_gross_movement_pct": 15.5,
+            "value_prev": 261,
+            "value_curr": 225,
+            "size_share_pct": 7.8
+          },
+          {
+            "member": "Riverbend",
+            "contribution": -35,
+            "share_of_change_pct": 16.7,
+            "share_of_gross_movement_pct": 15.1,
+            "value_prev": 348,
+            "value_curr": 313,
+            "size_share_pct": 10.5
+          },
+          {
+            "member": "Lakeside",
+            "contribution": -23,
+            "share_of_change_pct": 11.0,
+            "share_of_gross_movement_pct": 9.9,
+            "value_prev": 293,
+            "value_curr": 270,
+            "size_share_pct": 8.8
+          }
+        ]
+      },
+      "active_merchant|channel": {
+        "kpi": "active_merchant",
+        "dimension": "channel",
+        "unit": "merchants",
+        "total_change": -1304,
+        "filtered_members": 0,
+        "gross_movement": 1304,
+        "top": [
+          {
+            "member": "partner",
+            "contribution": -754,
+            "share_of_change_pct": 57.8,
+            "share_of_gross_movement_pct": 57.8,
+            "value_prev": 17693,
+            "value_curr": 16939,
+            "size_share_pct": 30.3,
+            "paying_merchant_effect": -256,
+            "active_rate_effect": -498,
+            "rate_prev_pct": 74.4,
+            "rate_curr_pct": 72.3
+          },
+          {
+            "member": "direct_sales",
+            "contribution": -258,
+            "share_of_change_pct": 19.8,
+            "share_of_gross_movement_pct": 19.8,
+            "value_prev": 23263,
+            "value_curr": 23005,
+            "size_share_pct": 39.9,
+            "paying_merchant_effect": 150,
+            "active_rate_effect": -408,
+            "rate_prev_pct": 75.1,
+            "rate_curr_pct": 73.8
+          },
+          {
+            "member": "telesales",
+            "contribution": -207,
+            "share_of_change_pct": 15.9,
+            "share_of_gross_movement_pct": 15.9,
+            "value_prev": 10475,
+            "value_curr": 10268,
+            "size_share_pct": 18.0,
+            "paying_merchant_effect": 52,
+            "active_rate_effect": -259,
+            "rate_prev_pct": 75.2,
+            "rate_curr_pct": 73.4
+          },
+          {
+            "member": "online_self_serve",
+            "contribution": -85,
+            "share_of_change_pct": 6.5,
+            "share_of_gross_movement_pct": 6.5,
+            "value_prev": 6882,
+            "value_curr": 6797,
+            "size_share_pct": 11.8,
+            "paying_merchant_effect": 37,
+            "active_rate_effect": -122,
+            "rate_prev_pct": 75.2,
+            "rate_curr_pct": 73.9
+          }
+        ]
+      },
+      "active_rate|channel": {
+        "kpi": "active_rate",
+        "dimension": "channel",
+        "unit": "pp",
+        "total_change": -1.65,
+        "filtered_members": 0,
+        "gross_movement": 1.65,
+        "top": [
+          {
+            "member": "partner",
+            "contribution": -0.96,
+            "share_of_change_pct": 58.3,
+            "share_of_gross_movement_pct": 58.3,
+            "value_prev": 74.4,
+            "value_curr": 72.3,
+            "size_share_pct": 30.6,
+            "own_rate_effect": -0.64,
+            "mix_effect": -0.32
+          },
+          {
+            "member": "direct_sales",
+            "contribution": -0.32,
+            "share_of_change_pct": 19.5,
+            "share_of_gross_movement_pct": 19.5,
+            "value_prev": 75.1,
+            "value_curr": 73.8,
+            "size_share_pct": 40.1,
+            "own_rate_effect": -0.52,
+            "mix_effect": 0.2
+          },
+          {
+            "member": "telesales",
+            "contribution": -0.26,
+            "share_of_change_pct": 15.8,
+            "share_of_gross_movement_pct": 15.8,
+            "value_prev": 75.2,
+            "value_curr": 73.4,
+            "size_share_pct": 18.0,
+            "own_rate_effect": -0.33,
+            "mix_effect": 0.07
+          },
+          {
+            "member": "online_self_serve",
+            "contribution": -0.11,
+            "share_of_change_pct": 6.4,
+            "share_of_gross_movement_pct": 6.4,
+            "value_prev": 75.2,
+            "value_curr": 73.9,
+            "size_share_pct": 11.8,
+            "own_rate_effect": -0.16,
+            "mix_effect": 0.05
+          }
+        ]
+      },
+      "new_merchant|channel": {
+        "kpi": "new_merchant",
+        "dimension": "channel",
+        "unit": "merchants",
+        "total_change": -210,
+        "filtered_members": 0,
+        "gross_movement": 406,
+        "top": [
+          {
+            "member": "partner",
+            "contribution": -304,
+            "share_of_change_pct": 144.8,
+            "share_of_gross_movement_pct": 74.9,
+            "value_prev": 930,
+            "value_curr": 626,
+            "size_share_pct": 28.0
+          },
+          {
+            "member": "direct_sales",
+            "contribution": 69,
+            "share_of_change_pct": -32.9,
+            "share_of_gross_movement_pct": 17.0,
+            "value_prev": 1377,
+            "value_curr": 1446,
+            "size_share_pct": 43.5
+          },
+          {
+            "member": "online_self_serve",
+            "contribution": 29,
+            "share_of_change_pct": -13.8,
+            "share_of_gross_movement_pct": 7.1,
+            "value_prev": 398,
+            "value_curr": 427,
+            "size_share_pct": 12.8
+          },
+          {
+            "member": "telesales",
+            "contribution": -4,
+            "share_of_change_pct": 1.9,
+            "share_of_gross_movement_pct": 1.0,
+            "value_prev": 620,
+            "value_curr": 616,
+            "size_share_pct": 18.6
+          }
+        ]
+      }
+    },
+    "notes": [
+      "Comparisons are like-for-like: same day of the previous month.",
+      "Flow KPIs (new, expiry, renewed) are month-to-date sums.",
+      "Movers below 2% of total size are ignored."
+    ]
+  },
+  "brief": {
+    "title": "FNB 2026-10-28: active merchants down 1,304 (-2.2%) vs same day last month",
+    "summary": "Active merchants stand at 57,009, down 1,304 (-2.2%) versus the same day last month (2026-09-28). Active rate is 73.3% (-1.6 pp), while paying merchants moved -28. The 180-day robust trend is up (moderate, +2.5% over the window) and momentum is decelerating. Month-end forecast (2026-10-31, a Saturday): 59,878 active merchants.",
+    "drivers": [
+      "Expired merchants (via paying merchants): -4,203 active merchants.",
+      "New merchants (via paying merchants): +2,505 active merchants.",
+      "Renewed merchants (via paying merchants): +1,677 active merchants.",
+      "Active rate effect: -1,283 active merchants.",
+      "Active merchants by province: Harborview -1,106 (84.8% of the net -1,304 change).",
+      "Active rate by province: Harborview -1.42 pp (86.0% of the net -1.65 pp change); its own rate 76.2% -> 64.8%.",
+      "New merchants month-to-date by province: Eastvale -46 (21.9% of the net -210 change).",
+      "Active merchants by channel: partner -754 (57.8% of the net -1,304 change).",
+      "Active rate by channel: partner -0.96 pp (58.3% of the net -1.65 pp change); its own rate 74.4% -> 72.3%.",
+      "New merchants month-to-date by channel: partner -304 (144.8% of the net -210 change)."
+    ],
+    "recommendations": [
+      "Investigate engagement in Harborview: its active rate went from 76.2% to 64.8% (effect -1,111 active merchants). Check incidents, support tickets and field-team coverage there.",
+      "Review acquisition in the partner channel: month-to-date new merchants 930 -> 626. Confirm pipeline and partner activity."
+    ]
+  },
+  "source": "template",
+  "attempts": 0,
+  "rejected_numbers": []
+}
